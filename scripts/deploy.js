@@ -1,6 +1,6 @@
 const { ethers, upgrades} = require("hardhat");
 // const hre = require("hardhat");
-require('@openzeppelin/hardhat-upgrades');
+// require('@openzeppelin/hardhat-upgrades');
 
 async function main() {
 
@@ -105,23 +105,8 @@ async function main() {
     const tx = await crowdSale.setTaxRates(buyTax, sellTax);
     await tx.wait();
     console.log(" Tax rates set successfully.");
+    
 }
-
-
-
-
-  
-  // Upgrade Contract
-
-  // let upgradeVesting = await upgrades.upgradeProxy("0x76fbC4CA57a328E5fcfAD7123b40Ef1e5573f480", Vesting);
-
-  //   const updatedImpAddress = await upgradeEstiaVesting.getAddress();
-
-  //   console.log(
-  //   `EstiaVesting Contract Upgraded Imp Address: ${updatedImpAddress}`
-  // );
-
-
 
 
 main().catch((error) => {
