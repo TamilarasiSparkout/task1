@@ -259,15 +259,15 @@ contract Vesting is
     }
 
    
-    function withdrawToken(
-        address _tokenContract,
-        uint256 _amount
-    ) external onlyOwner nonReentrant {
-        require(_tokenContract != address(0), "Address cant be zero address");
-        IERC20 tokenContract = IERC20(_tokenContract);
-        tokenContract.safeTransfer(msg.sender, _amount);
-        emit WithdrawToken(_tokenContract, msg.sender, _amount);
-    }
+    // function withdrawToken(
+    //     address _tokenContract,
+    //     uint256 _amount
+    // ) external onlyOwner nonReentrant {
+    //     require(_tokenContract != address(0), "Address cant be zero address");
+    //     IERC20 tokenContract = IERC20(_tokenContract);
+    //     tokenContract.safeTransfer(msg.sender, _amount);
+    //     emit WithdrawToken(_tokenContract, msg.sender, _amount);
+    // }
 
     // function withdrawEther(
     //     address payable _to,
