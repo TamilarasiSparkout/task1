@@ -1,6 +1,6 @@
 const { ethers, upgrades} = require("hardhat");
 // const hre = require("hardhat");
-// require('@openzeppelin/hardhat-upgrades');
+require('@openzeppelin/hardhat-upgrades');
 
 async function main() {
 
@@ -101,7 +101,6 @@ async function main() {
     //Set tax rates
 
     const buyTax = 200;  // 2%
-    const sellTax = 150; // 1.5%
     const tx = await crowdSale.setTaxRates(buyTax, sellTax);
     await tx.wait();
     console.log(" Tax rates set successfully.");
